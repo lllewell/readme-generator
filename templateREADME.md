@@ -36,3 +36,10 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 
 ## Tests
+ 
+## Questions
+    
+![github](https://github.com/${answers.github})
+
+Feel free to email me with additional questions
+![email]()

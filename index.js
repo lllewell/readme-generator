@@ -89,7 +89,7 @@ inquirer
             type: "checkbox",
             name: "license",
             message: "Pick the necessary license",
-            choices: [],
+            choices: ["MIT", "BSD", "CC", "APACHE"],
         },
         {
             type: "input",
