@@ -7,54 +7,55 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 // I'm going to build two different functions, one with the template for building the README and one for writing the file
 const buildFile = function (answers) {
-    `# <${answers.title}>
+    return `# <${answers.title}>
 
-    ![badge](https://img.shields.io/badge/${answers.license}-license-gold)
+![badge](https://img.shields.io/badge/${answers.license}-license-gold)
 
-    ## Description
-    
-    ${answers.description}
-    
-    ## Table of Contents
-    
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    
-    ## Installation
-    
-    ${answers.installation}
-    
-    ## Usage
-    
-    ${answers.usage}
-    
-    ## License
-    
-    This application is covered under the ${answers.license} license
-    
-    
-    
-    ## How to Contribute
-    
-    ${answers.contributes}
-    
-    ## Tests
-    
-    ${answers.tests}
+## Description
 
-    ## Questions
-    
-    ![github](https://github.com/${answers.github})
+${answers.description}
 
-    Feel free to email me with additional questions @
-    ![email](${answers.email})`;
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
+- [License](#license)
+
+## Installation
+
+${answers.installation}
+
+## Usage
+
+${answers.usage}
+
+## License
+
+This application is covered under the ${answers.license} license
+
+
+
+## How to Contribute
+
+${answers.contributes}
+
+## Tests
+
+${answers.tests}
+
+## Questions
+
+![github](https://github.com/${answers.github})
+
+Feel free to email me with additional questions @
+![email](${answers.email})`;
 
 };
 
-const writeToFile = function (data) {
-    fs.writeFileSync('README1.md', JSON.stringify(data));
+const writeToFile = function (html) {
+    if (!fs.existsSync('./output')) fs.mkdirSync('./output');
+    fs.writeFileSync('output/README.md', html);
     console.log('Successfully written');
 }
 
