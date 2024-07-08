@@ -23,10 +23,6 @@
 
 
 
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
 
 
 ## How to Contribute

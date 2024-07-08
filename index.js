@@ -9,6 +9,8 @@ const fs = require('fs');
 const buildFile = function (answers) {
     `# <${answers.title}>
 
+    ![badge](https://img.shields.io/badge/${answers.license}-license-gold)
+
     ## Description
     
     ${answers.description}
@@ -32,9 +34,6 @@ const buildFile = function (answers) {
     
     This application is covered under the ${answers.license} license
     
-    ## Badges
-    
-    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
     
     
     ## How to Contribute
@@ -55,9 +54,8 @@ const buildFile = function (answers) {
 };
 
 const writeToFile = function (data) {
-    fs.writeFileSync('README1.md', JSON.stringify(data), (err) => {
-        err ? console.log(err) : console.log('Successfuly written')
-    });
+    fs.writeFileSync('README1.md', JSON.stringify(data));
+    console.log('Successfully written');
 }
 
 
