@@ -1,6 +1,6 @@
 # <My README>
 
-![badge](https://img.shields.io/badge/-license-gold)
+![badge](https://img.shields.io/badge/MIT-license-gold)
 
 ## Description
 
@@ -23,7 +23,7 @@ This is how you use this app
 
 ## License
 
-This application is covered under the  license
+This application is covered under the MIT license
 
 
 
