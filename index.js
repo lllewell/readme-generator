@@ -7,15 +7,13 @@ const fs = require('fs');
 // TODO: Create an array of questions for user input
 // I'm going to build two different functions, one with the template for building the README and one for writing the file
 const buildFile = function (answers) {
-    `# <Your-Project-Title>
+    `# <${answers.title}>
 
     ## Description
     
-    
+    ${answers.description}
     
     ## Table of Contents
-    
-    If your README is long, add a table of contents to make it easy for users to find what they need.
     
     - [Installation](#installation)
     - [Usage](#usage)
@@ -24,35 +22,45 @@ const buildFile = function (answers) {
     
     ## Installation
     
-    What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+    ${answers.installation}
     
     ## Usage
     
-    
+    ${answers.usage}
     
     ## License
     
-    
+    This application is covered under the ${answers.license} license
     
     ## Badges
     
     ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
     
-    Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-    
     
     ## How to Contribute
     
+    ${answers.contributes}
     
     ## Tests
     
+    ${answers.tests}
+
     ## Questions
     
     ![github](https://github.com/${answers.github})
 
-    Feel free to email me with additional questions
-    ![email]()`
+    Feel free to email me with additional questions @
+    ![email](${answers.email})`;
+
+};
+
+const writeToFile = function (data) {
+    fs.writeFileSync('README1.md', JSON.stringify(data), (err) => {
+        err ? console.log(err) : console.log('Successfuly written')
+    });
 }
+
+
 inquirer
     .prompt([
         {
@@ -66,12 +74,6 @@ inquirer
             name: "description",
             message: "Enter description",
             default: "This is a README",
-        },
-        {
-            type: "input",
-            name: "contents",
-            message: "Enter table of contents",
-            default: "This is my table of contents",
         },
         {
             type: "input",
@@ -93,7 +95,7 @@ inquirer
         },
         {
             type: "input",
-            name: "contributing",
+            name: "contributes",
             message: "How can users contribute to this current app?",
             default: "Here is how you can contribute to this app",
         },
@@ -120,12 +122,9 @@ inquirer
     .then(writeToFile);
 
 // TODO: Create a function to write README file
-function writeToFile('README1.md', data) {
-    console.log('Successfuly written');
-}
 
 // TODO: Create a function to initialize app
-function init() { }
+// function init() { }
 
 // Function call to initialize app
-init();
+// init();
