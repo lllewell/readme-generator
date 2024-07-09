@@ -15,3 +15,6 @@ To use the app, you will run node index.js and type your answer for the prompts.
 
 ![screenshot](./images/command-line-screenshot.png)
 
+[gitHub-repo](https://github.com/lllewell/readme-generator)
+
+[video](https://drive.google.com/file/d/1R3HYTRdbEdWQtDu9mZK5sRw90RA2ylY6/view?usp=sharing)

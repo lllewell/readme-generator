@@ -37,7 +37,7 @@ These are the tests necessary to run this app
 
 ## Questions
 
-![github](https://github.com/Github)
+[github](https://github.com/Github)
 
 Feel free to email me with additional questions @
-![email](me@me)
+[email](me@me)

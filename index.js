@@ -46,10 +46,10 @@ ${answers.tests}
 
 ## Questions
 
-![github](https://github.com/${answers.github})
+[github](https://github.com/${answers.github})
 
 Feel free to email me with additional questions @
-![email](${answers.email})`;
+[email](${answers.email})`;
 
 };
 
